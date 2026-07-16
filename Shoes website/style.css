@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: inter, Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  gap: 32px;
+  max-width: 1174px;
+  margin-block: min(4vw, 40px);
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+P {
+  font-size: clamp(12px, 2cqi, 1rem);
+}
+h2 {
+  font-size: clamp(16px, 4cqi, 1.5rem);
+}
+h3 {
+  font-size: clamp(14px, 4cqi, 1.25rem);
+}
+aside img,
+.center-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-section {
+  display: flex;
+  gap: 16px;
+  padding-left: 15px;
+}
+.image-section aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* content section */
+.content {
+  padding-right: 15px;
+  /* min-width: fit-content; */
+  min-width: 50%;
+}
+.heading {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  container-type: inline-size;
+}
+.heading h1 {
+  font-size: clamp(24px, 8cqi, 2rem);
+}
+.heading p {
+  color: gray;
+  font-size: clamp(16px, 4cqi, 1.25rem);
+  font-weight: 500;
+}
+.green-text {
+  color: green;
+  font-size: clamp(16px, 5cqi, 1.5rem);
+}
+.price {
+  margin-top: 8px;
+  display: grid;
+  gap: 4px;
+}
+.price p {
+  margin-top: 4px;
+  color: gray;
+  font-weight: 500;
+}
+.variants {
+  padding-right: 10px;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  container-type: inline-size;
+}
+.variant {
+  width: clamp(45px, 25%, 99px);
+}
+
+.size-section {
+  margin-top: 47px;
+  min-width: max-content;
+}
+.size-section .heading-size {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  container-type: inline-size;
+}
+.size-section .size-variants {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 8px;
+  margin-top: 23px;
+  container-type: inline-size;
+}
+.size-section .size-variants .size-variant-box {
+  border: 1px solid gray;
+  width: 100%;
+  text-align: center;
+  padding-block: 12px;
+  font-size: clamp(14px, 4cqi, 20px);
+}
+.btn-section {
+  padding: 10px;
+  margin-top: 40px;
+  min-width: max-content;
+}
+.btn-section {
+  container-type: inline-size;
+}
+button {
+  display: block;
+  width: 100%;
+  height: min(64px, 8vw);
+  border: none;
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  font-family: inter, Arial, Helvetica, sans-serif;
+  font-size: clamp(14px, 4cqi, 20px);
+  cursor: pointer;
+  outline: none;
+}
+.btn-section button:last-child {
+  margin-top: 8px;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  border: 1px solid gray;
+}
+@media (max-width: 425px) {
+  .container {
+    margin: 8px auto;
+    flex-direction: column;
+  }
+  .image-section {
+    padding-inline: 10px;
+  }
+  .content {
+    padding-inline: 15px;
+  }
+  /* .container {
+  margin: 10px auto;
+} */
+  /* .variants {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    align-items: center;
+  
+}
+.variant{
+  width: 99px;
+
+}
+.variant2,.variant4{
+  justify-self: start;
+} */
+  button {
+    height: min(64px, 12vw);
+  }
+}
